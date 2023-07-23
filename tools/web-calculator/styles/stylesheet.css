@@ -1,0 +1,282 @@
+html {
+  background-color: #2d3238;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    141deg,
+    #411717 5%,
+    #0a1e33 41%,
+    #1b4c61 80%
+  );
+}
+
+body {
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
+}
+
+#gameName {
+  font-size: 2em;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0.4em;
+  background-color: rgb(8, 5, 8);
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 0 3vh rgba(0, 0, 0, 0.445);
+  background-image: linear-gradient(
+    141deg,
+    #773838 5%,
+    #0a1e33 41%,
+    #5f2c2c 80%
+  );
+}
+
+#container {
+  width: 100%;
+  height: 72.5vh;
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  margin: auto;
+  margin-top: 0;
+  box-shadow: 0 0 3vh rgba(0, 0, 0, 0.445);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.containerRow {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row;
+}
+
+#display {
+  height: 10vh;
+  width: 100%;
+  flex-flow: column nowrap;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+input {
+  height: 70%;
+  font-size: 5vh;
+  text-align: right;
+  border-style: none;
+  padding: 0 1.5vh 1vh 2.5vh;
+  outline: none;
+  color: rgb(46, 46, 46);
+}
+
+
+#prevInputs-container {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-height: 30%;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: rgb(141, 141, 141);
+}
+
+#prevInputs-history {
+  padding: 0 10px;
+  position: absolute;
+  z-index: 2;
+}
+
+#prevInputs {
+  z-index: 3;
+  max-width: 100%;
+  text-align: right;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  padding-right: 10px;
+  font-size: 2.5vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#prevInputs:empty {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#prevInputs:not(:empty):hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#prevInputs:empty::-moz-selection {
+  background: rgb(192, 192, 192);
+}
+
+#prevInputs:empty::selection {
+  background: rgb(192, 192, 192);
+}
+
+
+button {
+  padding: 0;
+  width: 100%;
+  font-size: 4vh;
+  border-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  font-weight: bold;
+  color: rgb(46, 46, 46);
+  border: 1px solid rgb(0, 0, 0);
+}
+#cred {
+  padding: 0;
+  width: 100%;
+  font-size: 4vh;
+  border-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  font-weight: bold;
+  background-color: rgba(201, 6, 6, 0.658);
+   color: rgb(8, 8, 8);
+  border: 1px solid rgb(0, 0, 0);
+}
+#cred:hover {
+  background-color: rgba(201, 6, 6, 0.836);
+}
+button:hover {
+  background-color: rgb(207, 207, 207);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+button:active {
+  background-color: rgb(190, 190, 190);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.operations {
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.operations:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+.operations:active {
+  background-color: rgb(170, 170, 170);
+}
+
+
+#equals {
+  width: 200%;
+  box-sizing: border-box;
+  padding-left: 3px;
+  background-color: rgba(201, 155, 57, 0.856);
+  border: none !important;
+}
+
+#equals:hover {
+  background-color: rgba(175, 135, 49, 0.897);
+}
+
+#equals:active {
+  background-color: rgb(161, 125, 48);
+  border: none !important;
+}
+
+/* Delete Button */
+#delete {
+  color: transparent;
+}
+
+#delete i {
+  margin-left: -15px;
+  color: rgb(46, 46, 46);
+}
+
+
+#github {
+  color: rgb(23, 36, 48);
+  margin: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+@media only screen and (min-width: 768px) {
+  #gameName {
+    font-size: 2.8em;
+  }
+
+  button {
+    font-size: 4.5vh;
+  }
+
+  #container {
+    width: 60vh;
+    margin-top: 3vh;
+  }
+
+  #github {
+    z-index: unset;
+  }
+}
+
+.footer_area .single-footer-widget {
+  text-align: center; 
+}
+
+
+  .footer_area .f_widget .f_title h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    
+  }
+ 
+
+  .footer_area .f_widget ul li {
+    display: block;
+    padding-bottom: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer; 
+    
+  }
+    
+    .footer_area .f_widget ul li:hover {
+      color: #3fcaff; }
+
+.single-footer-widget {
+padding: 30px ;
+border-top: 1px solid rgba(255, 255, 255, 0.103); }
+
+.single-footer-widget .copy_right_text p {
+  margin: 0;
+  color: #fff;
+  margin-left: -15px; }
+  .single-footer-widget .copy_right_text p a {
+    color: #3fcaff; }
+
+@media (pointer: coarse) {
+  button:hover {
+    background-color: rgb(239 239 239);
+  }
+
+  button:active {
+    background-color: rgb(207, 207, 207);
+    box-shadow: none;
+  }
+}
