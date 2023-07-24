@@ -36,7 +36,7 @@ function downloadQRCode() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  const defaultURL = 'https://abhi.fun'; 
+  const defaultURL = 'https://abhi.fun/tools/qr-generator/'; 
   const textInput = document.getElementById('textInput');
   textInput.value = defaultURL;
   generateQRCode();
