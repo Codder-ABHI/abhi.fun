@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code Generator</title>
+  <link rel="icon" type="image/x-icon" href="/assets/logo.ico">
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <link href="style.css" rel="stylesheet" >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="QR Code Generator">
+  <meta property="og:url" content="https://abhi.fun/tools/qr-generator">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/792674960723935242/1133059247895232512/logo.png">
+  <meta property="og:description" content="A Powerful QR Code Generator by ABHI, No SignUp needed and Unlimited QR Code Generation.">
+</head>
+<body>
+  
+   <header>
+  
+   <a href="https://abhi.fun/tools/qr-generator"><img src="assets/logo.png" class="header-icon"></a> 
+   <a class="hed"href="https://abhi.fun/tools/qr-generator"> <h1 class="titl">QR Generator</h1></a> 
+  </header>
+  <div class="container">
+    <div>
+      <h1>QR Code Generator</h1>
+      <label for="textInput">Enter text or URL:</label>
+      <input placeholder="Your text or link here" type="text" id="textInput">
+      <button class="gen" onclick="generateQRCode()">Generate QR Code</button>
+      <button class="dwn" onclick="downloadQRCode()">Download QR Code</button>
+      
+    </div>
+    
+    <div class="qrcode-container">
+      <div id="qrcode"  onclick="downloadQRCode()"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>
+      Copyright &copy; <script>document.write(new Date().getFullYear());</script> Made with ❤️</i> by <a class="link" href="https://abhi.fun/" target="_blank">ABHI</a>
+      </p>
+  </div>
+
+  <script src="js/gen.js"></script>
+</body>
+</html>
