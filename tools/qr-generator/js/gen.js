@@ -26,30 +26,7 @@ function downloadQRCode() {
     alert('Please generate a QR code first.');
     return;
   }
-const qrCodeData = document.getElementById('qrcode').getElementsByTagName('img')[0].src;
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-    const qrImage = new Image();
 
-    qrImage.onload = function() {
-      canvas.width = qrImage.width;
-      canvas.height = qrImage.height;
-      context.drawImage(qrImage, 0, 0);
-
-     
-      const downloadLink = document.createElement('a');
-      downloadLink.href = canvas.toDataURL('image/png');
-      downloadLink.download = 'qrcode.png';
-
-     
-      downloadLink.style.display = 'none';
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-    };
-
-    qrImage.src = qrCodeData;
-  }
  
   const qrCodeData = document.getElementById('qrcode').getElementsByTagName('img')[0].src;
   const downloadLink = document.createElement('a');
